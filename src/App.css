@@ -1,33 +1,73 @@
-.App {
+*{
+  padding:0px;
+  margin:0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+html{
+  height: fit-content;
+  
+}
+body{
+  margin-top:60px;
+  height: 100vh;
+  overflow: hidden;
+}
+.App{
+  height: 100vh;
+}
+
+.header{
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height: 60px;
+  background-color: rgb(180,120,70);
+  font-size: 2rem;
+}
+.header p{
+  position: absolute;
+  top:5px;
+  left:30px;
+}
+.header ul{
+  position: absolute;
+  right: 20px;
+  top:0px;
+  list-style: none;
+  height: 100%;
+}
+
+.header ul li{
+  display: inline-block;
+  padding:0 10px;
+  margin: 5px 0px;
+  height:50px;
+}
+
+.homePage{
   text-align: center;
+  height:100%;
+  align-content: center;
+  background: url("./images/kevin-young-7002-unsplash.jpg") no-repeat center center fixed;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.homePageContent{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.homePageContent h1{
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.homePageContent p{
+  padding:0 0 15px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homePageContent input{
+  padding:10px;
+  font-size:2rem;
 }
