@@ -15,7 +15,7 @@ body{
 .App{
   height: 100vh;
 }
-
+/* TODO: redo css for aligning items, currentyl breaks too easily maybe use grid rows for main items */
 .header{
   position: fixed;
   top:0px;
