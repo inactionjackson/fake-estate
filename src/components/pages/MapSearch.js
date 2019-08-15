@@ -1,23 +1,22 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react';
+import {useStoreState} from 'easy-peasy';
 
-import SearchHeader from '..SearchHeader';
 
-export default class MapSearch extends Component {
-    constructor(){
-        
-    }
+import SearchHeader from '../layout/SearchHeader';
 
-    render() {
-        return (
-            <div className="mapSearchPage">
-                <SearchHeader />
-                <div className="mapSearchContent">
-                    <div id="resultsGrid">
+export default function MapSearch() {
 
-                    </div>
-                    <div id="mpaView"></div>
+    //TODO: get placeholder data and put it into store.
+
+    return (
+        <div className="mapSearchPage">
+            <SearchHeader />
+            <div className="mapSearchContent">
+                <div id="resultsGrid">
+
                 </div>
+                <div id="mpaView"></div>
             </div>
-        )
-    }
+        </div>
+    )
 }

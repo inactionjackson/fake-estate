@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react';
+import { useStoreState } from 'easy-peasy';
 
-export default class SearchHeader extends Component {
-  render() {
-    return (
-      <div className="SearchHeader">
-        //TODO: add dropdowns for search options
-      </div>
-    )
-  }
+export default function SearchHeader() {
+  const searchFilters = useStoreState(state => state.searchFilters);
+
+  return (
+    <div className="SearchHeader">
+    //TODO: add dropdowns for search options
+    </div>
+  )
+
 }

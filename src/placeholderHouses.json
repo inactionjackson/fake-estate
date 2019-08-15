@@ -1,0 +1,104 @@
+{
+    "houses":[
+        {
+            "addr":"placeholder",
+            "sqf":2956,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\adriana-carles-630580-unsplash.jpg"],
+            "thumb": "images\\adriana-carles-630580-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":3400,
+            "bdr":4,
+            "bth":3,
+            "garage":false,
+            "price":384599,
+            "imgs":["images\\derek-torsani-417291-unsplash.jpg"],
+            "thumb": "images\\derek-torsani-417291-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":1600,
+            "bdr":2,
+            "bth":2,
+            "garage":false,
+            "price":257489,
+            "imgs":["images\\eric-muhr-725953-unsplash.jpg"],
+            "thumb": "images\\eric-muhr-725953-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":3200,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\evelyn-paris-95853-unsplash.jpg"],
+            "thumb": "images\\evelyn-paris-95853-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":980,
+            "bdr":1,
+            "bth":1,
+            "garage":false,
+            "price":257489,
+            "imgs":["images\\ialicante-mediterranean-homes-475777-unsplash.jpg"],
+            "thumb": "images\\ialicante-mediterranean-homes-475777-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":2956,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\ian-keefe-449093-unsplash.jpg"],
+            "thumb": "images\\ian-keefe-449093-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":2956,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\jesse-roberts-146556-unsplash.jpg"],
+            "thumb": "images\\jesse-roberts-146556-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":2956,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\luke-stackpoole-561551-unsplash.jpg"],
+            "thumb": "images\\luke-stackpoole-561551-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":2956,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\pixasquare-622732-unsplash.jpg"],
+            "thumb": "images\\pixasquare-622732-unsplash.thumb.jpg"
+        },
+        {
+            "addr":"placeholder",
+            "sqf":2956,
+            "bdr":3,
+            "bth":2,
+            "garage":true,
+            "price":257489,
+            "imgs":["images\\scott-webb-167099-unsplash.jpg"],
+            "thumb": "images\\scott-webb-167099-unsplash.thumb.jpg"
+        }
+    ]
+}

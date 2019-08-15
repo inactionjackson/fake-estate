@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
 
-import Header from './components/layout/Header';
-import Home from './components/pages/Home';
-import MapSearch from './components/pages/MapSearch';
+import Header from "./components/layout/Header";
+import Home from "./components/pages/Home";
+import MapSearch from "./components/pages/MapSearch";
+import { StoreProvider, createStore } from "easy-peasy";
+import model from "./SearchModel";
 
-class App extends Component {
-  render() {
-    return (
+const store = createStore(model);
+
+export default function App() {
+  return (
+    <StoreProvider store={store}>
       <Router>
         <div className="App">
           <Header />
@@ -23,8 +26,6 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
-    );
-  }
+    </StoreProvider>
+  );
 }
-
-export default App;

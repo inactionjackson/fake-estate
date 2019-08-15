@@ -1,73 +1,94 @@
-*{
-  padding:0px;
-  margin:0px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-html{
+button:hover {
+  cursor: pointer;
+}
+html {
   height: fit-content;
-  
 }
-body{
-  margin-top:60px;
+body {
+  margin-top: 60px;
   height: 100vh;
   overflow: hidden;
 }
-.App{
+.App {
   height: 100vh;
 }
-/* TODO: redo css for aligning items, currentyl breaks too easily maybe use grid rows for main items */
-.header{
+.header {
   position: fixed;
-  top:0px;
-  left:0px;
-  width:100%;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   height: 60px;
-  background-color: rgb(180,120,70);
+  background-color: rgb(180, 120, 70);
   font-size: 2rem;
 }
-.header p{
+.header p {
   position: absolute;
-  top:5px;
-  left:30px;
+  top: 5px;
+  left: 30px;
 }
-.header ul{
+.header ul {
   position: absolute;
   right: 20px;
-  top:0px;
+  top: 0px;
   list-style: none;
   height: 100%;
 }
 
-.header ul li{
+.header ul li {
   display: inline-block;
-  padding:0 10px;
+  padding: 0 10px;
   margin: 5px 0px;
-  height:50px;
+  height: 50px;
 }
 
-.homePage{
+.homePage {
   text-align: center;
-  height:100%;
+  height: 100%;
   align-content: center;
-  /* background: url("./images/kevin-young-7002-unsplash.jpg") no-repeat center center fixed; */
+  background: url("./images/kevin-young-7002-unsplash.jpg") no-repeat center
+    fixed;
 }
 
-.homePageContent{
+.homePageContent {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.homePageContent h1{
+.homePageContent h1 {
   padding: 30px;
 }
 
-.homePageContent p{
-  padding:0 0 15px 0;
+.homePageContent p {
+  padding: 0 0 15px 0;
 }
 
-.homePageContent input{
-  padding:10px;
-  font-size:2rem;
+.homePageContent input {
+  padding: 10px;
+  font-size: 2rem;
+  border: none;
+}
+.homePageContent button {
+  padding: 10px 20px;
+  font-size: 2rem;
+  border: none;
+  background-color: rgb(224, 226, 252);
+}
+
+@media (max-width: 930px) {
+  .homePageContent input {
+    display: block;
+    width: 100%;
+  }
+  .homePageContent button {
+    display: block;
+    width: 100%;
+  }
 }
