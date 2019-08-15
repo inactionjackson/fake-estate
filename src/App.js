@@ -4,7 +4,6 @@ import logo from './logo.svg';
 import './App.css';
 
 import Header from './components/layout/Header';
-import SearchHeader from './components/layout/SearchHeader';
 import Home from './components/pages/Home';
 import MapSearch from './components/pages/MapSearch';
 
@@ -19,7 +18,6 @@ class App extends Component {
               <Home />
             </Route>
             <Route path="/mapSearch">
-              <SearchHeader />
               <MapSearch />
             </Route>
           </Switch>
