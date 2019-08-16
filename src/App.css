@@ -57,7 +57,7 @@ body {
 
 .homePageContent {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -66,18 +66,14 @@ body {
   padding: 30px;
 }
 
-.homePageContent p {
-  padding: 0 0 15px 0;
-}
-
 .homePageContent input {
   padding: 10px;
-  font-size: 2rem;
+  font-size: 1.5em;
   border: none;
 }
 .homePageContent button {
   padding: 10px 20px;
-  font-size: 2rem;
+  font-size: 1.5em;
   border: none;
   background-color: rgb(224, 226, 252);
 }
@@ -91,4 +87,26 @@ body {
     display: block;
     width: 100%;
   }
+}
+
+.autoCompleteBox {
+  position: absolute;
+  text-decoration: none;
+  text-align: left;
+  list-style: none;
+  width: 100%;
+}
+
+.autoCompleteBox > li {
+  background-color: rgb(225, 238, 241);
+  font-size: 1.2em;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(136, 178, 189);
+  overflow: hidden;
+}
+
+.autoCompleteBox > li:hover {
+  background-color: rgb(179, 218, 228);
+  cursor: pointer;
 }

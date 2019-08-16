@@ -1,13 +1,12 @@
-import React, { Fragment } from 'react';
-import {Link} from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NAME_STYLE = {
-  color:"black"
-
-}
+  color: "black"
+};
 const NAV_STYLE = {
-  color:"black"
-}
+  color: "black"
+};
 
 export default function Header() {
   return (
@@ -22,5 +21,5 @@ export default function Header() {
         <li>links</li>
       </ul>
     </div>
-  )
+  );
 }
