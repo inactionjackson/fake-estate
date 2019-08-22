@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { StoreProvider, createStore } from "easy-peasy";
 import "./App.css";
 
 import Header from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import MapSearch from "./components/pages/MapSearch";
-import { StoreProvider, createStore } from "easy-peasy";
 import model from "./SearchModel";
 
 const store = createStore(model);

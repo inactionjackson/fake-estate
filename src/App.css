@@ -47,10 +47,10 @@ body {
   height: 50px;
 }
 
-.homePage {
-  text-align: center;
+.page {
   height: 100%;
-  align-content: center;
+}
+.homePage {
   background: url("./images/kevin-young-7002-unsplash.jpg") no-repeat center
     fixed;
 }
@@ -109,4 +109,8 @@ body {
 .autoCompleteBox > li:hover {
   background-color: rgb(179, 218, 228);
   cursor: pointer;
+}
+
+.searchHeader {
+  background-color: gray;
 }

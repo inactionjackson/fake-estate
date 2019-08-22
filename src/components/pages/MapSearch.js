@@ -7,7 +7,7 @@ export default function MapSearch() {
   //TODO: get placeholder data and put it into store.
 
   return (
-    <div className="mapSearchPage">
+    <div className="page mapSearchPage">
       <SearchHeader />
       <div className="mapSearchContent">
         <div id="resultsGrid" />

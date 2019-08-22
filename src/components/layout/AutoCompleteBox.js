@@ -16,7 +16,7 @@ export default function AutoCompleteBox({ suggestions, clickHandler }) {
             index={index}
             onClick={() => onSuggestionClicked(index)}
           >
-            {suggestion.city} , {suggestion.state}{" "}
+            {suggestion.city} , {suggestion.state}
           </li>
         );
       })}
