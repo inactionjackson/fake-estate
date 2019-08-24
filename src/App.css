@@ -95,22 +95,67 @@ body {
   text-align: left;
   list-style: none;
   width: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
-.autoCompleteBox > li {
+.searchHeader {
+  background-color: gray;
+}
+
+.searchHeader input {
+  font-size: 1.2em;
+  padding: 5px 12px;
+}
+
+.searchHeader button {
+  font-size: 1.2em;
+  border: none;
+  padding: 0;
+  width: 130px;
+}
+.searchHeader button span {
+  border-left: 1px solid black;
+  padding: 3px 5px;
+  float: right;
+}
+.searchHeader button:hover span {
+  background-color: rgb(67, 91, 133);
+}
+.searchHeader button p {
+  display: inline-block;
+  padding: 3px 10px;
+}
+
+.searchHeader .searchInputContainer {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.searchHeader .searchInputContainer .dropdownContainer {
+  display: inline-block;
+}
+
+.numberDropdown {
+  position: absolute;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.suggestion {
   background-color: rgb(225, 238, 241);
   font-size: 1.2em;
-  width: 100%;
   padding: 10px 20px;
   border-bottom: 1px solid rgb(136, 178, 189);
   overflow: hidden;
 }
 
-.autoCompleteBox > li:hover {
+.suggestion:hover {
   background-color: rgb(179, 218, 228);
   cursor: pointer;
 }
 
-.searchHeader {
-  background-color: gray;
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
 }

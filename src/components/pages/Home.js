@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   const findCityByTerm = term => {
-    //FIXME: make work when state is typed as well
+    //TODO: make work when state is typed as well
     // seperate by space or comma and test each term vs city and state
     term = term.toUpperCase();
     let termLen = term.length;
@@ -62,7 +62,7 @@ export default function Home() {
   };
 
   const listenForSubmit = e => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && searchTerm) {
       let bestMatch = selectedCity;
       if (!bestMatch) {
         const matchingCities = findCityByTerm(searchTerm);
