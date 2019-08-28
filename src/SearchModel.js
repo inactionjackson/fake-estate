@@ -29,6 +29,10 @@ const model = {
   selectedCity: { city: "", state: "" },
   setSelectedCity: action((state, obj) => {
     state.selectedCity = obj;
+  }),
+  filteredResults: [],
+  setFilteredResults: action((state, results) => {
+    state.filteredResults = results;
   })
 };
 

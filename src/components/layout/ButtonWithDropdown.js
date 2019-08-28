@@ -24,9 +24,12 @@ export default function ButtonWithDropdown({
   return (
     <div className="dropdownContainer">
       <button onClick={toggleList}>
-        <p>{value}</p>
+        <p>{valueFormatter(value)}</p>
         <span> &#x2228; </span>
       </button>
+      {showDropdown && (
+        <div className="clickCapture" onClick={toggleList}></div>
+      )}
       {showDropdown && (
         <NumberDropdown
           min={min}

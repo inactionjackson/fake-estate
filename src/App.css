@@ -112,7 +112,7 @@ body {
   font-size: 1.2em;
   border: none;
   padding: 0;
-  width: 130px;
+  min-width: 200px;
 }
 .searchHeader button span {
   border-left: 1px solid black;
@@ -158,4 +158,28 @@ body {
 .dropdownContainer {
   position: relative;
   display: inline-block;
+}
+
+.clickCapture {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.mapSearchResult {
+  display: grid;
+  min-height: 100%;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+  border-top: 1px solid black;
+}
+
+.resultGrid {
+  border-right: 1px solid black;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: 200px;
 }

@@ -1,9 +1,8 @@
 import React from "react";
-import { useStoreState, useStoreActions } from "easy-peasy";
+import { useStoreActions } from "easy-peasy";
 import ButtonWithDropdown from "./ButtonWithDropdown";
 
 export default function SearchHeader() {
-  const g_searchFilters = useStoreState(state => state.searchFilters);
   const g_setMinPrice = useStoreActions(actions => actions.setMinPrice);
   const g_setMaxPrice = useStoreActions(actions => actions.setMaxPrice);
   const g_setMinBdr = useStoreActions(actions => actions.setMinBdr);
@@ -33,7 +32,7 @@ export default function SearchHeader() {
     return price;
   };
   const bedFormatter = bdrms => {
-    if (parseInt(bdrms) > 0) {
+    if (parseInt(bdrms) >= 0) {
       bdrms += "+ Beds";
     }
     return bdrms;

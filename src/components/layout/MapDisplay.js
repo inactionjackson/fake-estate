@@ -1,11 +1,9 @@
-#import React, { Component } from 'react'
+import React from "react";
 
-export default class MapDisplay extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+export default function MapDisplay() {
+  return (
+    <div>
+      <div id="mapDisplay"></div>
+    </div>
+  );
 }

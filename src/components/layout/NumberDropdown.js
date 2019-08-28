@@ -10,22 +10,18 @@ export default function NumberDropdown({
   console.log(min);
   let options = [];
   let largestVal = min;
-  while (largestVal < max) {
+  while (largestVal <= max) {
     options.push(largestVal);
     largestVal += stepSize;
   }
+  if (options[options.length - 1] !== max) {
+    options.push(max);
+  }
 
-  const onOptionSelected = value => {
-    onSelect(value);
-  };
   return (
     <ul className="autoCompleteBox">
       {options.map((value, id) => (
-        <li
-          className="suggestion"
-          key={id}
-          onClick={() => onOptionSelected(valueFormatter(value))}
-        >
+        <li className="suggestion" key={id} onClick={() => onSelect(value)}>
           {valueFormatter(value)}
         </li>
       ))}
