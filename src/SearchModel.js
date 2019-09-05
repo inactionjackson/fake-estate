@@ -33,6 +33,10 @@ const model = {
   filteredResults: [],
   setFilteredResults: action((state, results) => {
     state.filteredResults = results;
+  }),
+  activeDropdown: null,
+  setActiveDropdown: action((state, id) => {
+    state.activeDropdown = id;
   })
 };
 
