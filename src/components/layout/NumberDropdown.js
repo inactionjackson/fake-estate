@@ -7,7 +7,6 @@ export default function NumberDropdown({
   onSelect,
   valueFormatter
 }) {
-  console.log(min);
   let options = [];
   let largestVal = min;
   while (largestVal <= max) {

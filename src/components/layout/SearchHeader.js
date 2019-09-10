@@ -1,5 +1,5 @@
 import React from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import ButtonWithDropdown from "./ButtonWithDropdown";
 import { Formatters as F } from "../Formatters";
 
@@ -12,6 +12,7 @@ export default function SearchHeader() {
   const g_togglebHasGarage = useStoreActions(
     actions => actions.togglebHasGarage
   );
+  const g_filteredResults = useStoreState(state => state.filteredResults);
   //TODO: style bar better
 
   return (
@@ -68,6 +69,9 @@ export default function SearchHeader() {
         name="hasGarage"
         onClick={g_togglebHasGarage}
       />
+      <p className="resultsCount">
+        {g_filteredResults ? g_filteredResults.length : 0} Results Found
+      </p>
     </div>
   );
 }

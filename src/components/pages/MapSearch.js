@@ -11,17 +11,20 @@ export default function MapSearch() {
   const g_setFilteredResults = useStoreActions(
     actions => actions.setFilteredResults
   );
-  const [fullResults, setFullResults] = useState(null);
+  const g_setFullResults = useStoreActions(actions => actions.setFullResults);
+  const g_fullResults = useStoreState(state => state.fullResults);
   useEffect(() => {
     Axios.get("placeholderHouses.json")
-      .catch(error => console.log("BAD", error))
-      .then(res => setFullResults(res.data.houses));
-    //TODO: get geolocation data and set up map
+      .catch(error => console.log(error))
+      .then(res => {
+        g_setFullResults(res.data.houses);
+        g_setFilteredResults(res.data.houses);
+      });
   }, [g_selectedCity]);
 
   useEffect(() => {
-    if (fullResults) {
-      const filteredResults = fullResults.filter(house => {
+    if (g_fullResults.length > 0) {
+      const filteredResults = g_fullResults.filter(house => {
         const doesGarageMatch =
           !g_searchFilters.bHasGarage ||
           (g_searchFilters.bHasGarage && house.garage);
@@ -35,10 +38,11 @@ export default function MapSearch() {
           doesGarageMatch
         );
       });
-      console.log(filteredResults);
-      g_setFilteredResults(filteredResults);
+      g_setFilteredResults(
+        filteredResults.map((house, i) => ({ ...house, id: i }))
+      );
     }
-  }, [g_searchFilters]);
+  }, [g_searchFilters, g_fullResults]);
   return (
     <div className="page">
       <SearchHeader />

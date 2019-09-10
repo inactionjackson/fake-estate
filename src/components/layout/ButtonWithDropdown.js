@@ -31,7 +31,6 @@ export default function ButtonWithDropdown({
   };
 
   useEffect(() => {
-    console.log(activeDropdown);
     if (activeDropdown === id) {
       setShowDropdown(true);
     } else {

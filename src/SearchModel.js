@@ -30,6 +30,10 @@ const model = {
   setSelectedCity: action((state, obj) => {
     state.selectedCity = obj;
   }),
+  fullResults: [],
+  setFullResults: action((state, res) => {
+    state.fullResults = res;
+  }),
   filteredResults: [],
   setFilteredResults: action((state, results) => {
     state.filteredResults = results;
@@ -37,6 +41,10 @@ const model = {
   activeDropdown: null,
   setActiveDropdown: action((state, id) => {
     state.activeDropdown = id;
+  }),
+  selectedHouseId: null,
+  setSelectedHouseId: action((state, id) => {
+    state.selectedHouseId = id;
   })
 };
 
