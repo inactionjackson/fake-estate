@@ -28,19 +28,17 @@ body {
   top: 5px;
   left: 30px;
 }
-.header ul {
-  position: absolute;
-  right: 20px;
-  top: 0px;
-  list-style: none;
-  height: 100%;
+.citySearchBox {
+  display: flex;
+  justify-content: center;
 }
-
-.header ul li {
-  display: inline-block;
-  padding: 0 10px;
-  margin: 5px 0px;
-  height: 50px;
+.header .citySearchBox {
+  font-size: 0.8rem;
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+  z-index: 900;
 }
 
 .page {
@@ -52,22 +50,26 @@ body {
 }
 
 .homePageContent {
-  position: absolute;
+  /* position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .homePageContent h1 {
+  display: flex;
+  justify-content: center;
   padding: 30px;
 }
-
-.homePageContent input {
+.homePageContent .citySearchBox {
+  margin: 0 auto;
+}
+.citySearchBox input {
   padding: 10px;
   font-size: 1.5em;
   border: none;
 }
-.homePageContent button {
+.citySearchBox button {
   padding: 10px 20px;
   font-size: 1.5em;
   border: none;
@@ -75,11 +77,11 @@ body {
 }
 
 @media (max-width: 930px) {
-  .homePageContent input {
+  .citySearchBox input {
     display: block;
     width: 100%;
   }
-  .homePageContent button {
+  .citySearchBox button {
     display: block;
     width: 100%;
   }
@@ -153,10 +155,12 @@ body {
 
 .clickCapture {
   position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  top: 0px;
-  left: 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(70, 70, 70, 0.3);
+  z-index: 900;
 }
 
 .mapSearchResult {
@@ -219,8 +223,10 @@ label:hover {
   border-right: 1px solid rgb(36, 74, 117);
 }
 .selectedThumb {
-  /* border: 3px solid black; */
-  opacity: 0.5;
+  -moz-box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  opacity: 0.7;
 }
 .resultThumbnail span {
   padding-left: 5px;
@@ -243,4 +249,54 @@ label:hover {
   display: inline;
   padding-left: 10px;
   color: white;
+}
+
+.detailsModul {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+}
+.detailsContent {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 95%;
+  width: 40%;
+  background-color: white;
+  z-index: 1000;
+  overflow: hidden;
+  -moz-box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  box-shadow: 0px 0px 100px 10px rgb(0, 0, 0);
+  display: grid;
+  grid-template-rows: 40% 60%;
+}
+
+.detailsGallery {
+  width: 100%;
+  background-color: black;
+}
+
+.detailsGallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.infoSpecs {
+  padding: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid black;
+  background-color: rgb(125, 175, 233);
+  color: white;
+  font-weight: 400;
+}
+
+.infoDescription {
+  padding: 10px;
+  font-size: 1.1em;
 }

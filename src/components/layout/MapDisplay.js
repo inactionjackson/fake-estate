@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useStoreState, useStoreActions } from "easy-peasy";
-import axios from "axios";
+import Axios from "axios";
 import L from "leaflet";
 import { Formatters as F } from "../Formatters";
 
@@ -16,6 +16,7 @@ export default function MapDisplay() {
   );
   const [bFailedToLoadMap, setbFailedToLoadMap] = useState(false);
   const [map, setMap] = useState(null);
+  const [bNewHouseCoordsNeeded, setbNewHouseCoordsNeeded] = useState(false);
   const [markers, setMarkers] = useState([]);
 
   const getRandomCoordinate = () => {
@@ -29,19 +30,22 @@ export default function MapDisplay() {
     g_setSelectedHouseId(id);
   };
   useEffect(() => {
+    const CancelToken = Axios.CancelToken;
+    const source = CancelToken.source();
     const url =
       "https://api.opencagedata.com/geocode/v1/json?key=2573852ff477475fa7c0da745eeea496&q=" +
       g_selectedCity.city +
       "+" +
       g_selectedCity.state;
-    axios
-      .get(url)
+    Axios.get(url)
       .catch(error => {
         console.log(error);
       })
       .then(res => {
         try {
-          let newMap = L.map("mapDisplay").setView(
+          document.getElementById("mapDisplay").innerHTML =
+            "<div id='map' style='width: 100%; height: 100%;'></div>";
+          let newMap = L.map("map").setView(
             [
               res.data.results[0].geometry.lat,
               res.data.results[0].geometry.lng
@@ -57,11 +61,15 @@ export default function MapDisplay() {
             }
           ).addTo(newMap);
           setMap(newMap);
+          setbNewHouseCoordsNeeded(true);
         } catch (e) {
           console.log("could not retrieve map coordinates:" + e);
           setbFailedToLoadMap(true);
         }
       });
+    return () => {
+      source.cancel("MapDisplay component unmounted");
+    };
   }, [g_selectedCity]);
 
   useEffect(() => {
@@ -80,27 +88,35 @@ export default function MapDisplay() {
       });
       g_setFullResults(mappedHouses);
     }
-    getRandomCoordinate();
-  }, [g_fullResults, map]);
+    setbNewHouseCoordsNeeded(false);
+  }, [bNewHouseCoordsNeeded]);
 
   useEffect(() => {
     if (g_filteredResults.length > 0 && map) {
       markers.forEach(m => {
-        m.marker.removeFrom(map);
+        if (m) {
+          m.marker.removeFrom(map);
+        }
       });
       setMarkers([]);
       setMarkers(
         g_filteredResults.map((house, i) => {
-          let m = L.marker(house.coords);
-          m.addTo(map);
-          m.bindPopup(F.price(house.price));
-          m.on("mouseover", () => {
-            markerHoverHandler(house.id);
-          });
-          return { marker: m, id: house.id };
+          if (house.coords) {
+            let m = L.marker(house.coords);
+            m.addTo(map);
+            m.bindPopup(F.price(house.price));
+            m.on("mouseover", () => {
+              markerHoverHandler(house.id);
+            });
+            return { marker: m, id: house.id };
+          }
         })
       );
-      console.log(markers);
+    } else if (g_filteredResults.length === 0) {
+      markers.forEach(m => {
+        m.marker.removeFrom(map);
+      });
+      setMarkers([]);
     }
   }, [g_filteredResults]);
 

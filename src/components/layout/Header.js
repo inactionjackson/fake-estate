@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CitySearchBox from "./CitySearchBox";
+import { useStoreState } from "easy-peasy";
 
 const NAME_STYLE = {
   color: "black"
@@ -9,17 +11,23 @@ const NAV_STYLE = {
 };
 
 export default function Header() {
+  const g_selectedCity = useStoreState(state => state.selectedCity);
+  const [bShowSearch, setbShowSearch] = useState(false);
+
+  useEffect(() => {
+    if (g_selectedCity.city !== "") {
+      setbShowSearch(true);
+    } else {
+      setbShowSearch(false);
+    }
+  }, [g_selectedCity]);
+
   return (
     <div className="header">
       <Link to="/" style={NAME_STYLE}>
-        <p>Fakestate</p>
+        <p>Fake-estate</p>
       </Link>
-      <ul>
-        <Link to="/mapSearch" style={NAV_STYLE}>
-          <li>map search</li>
-        </Link>
-        <li>links</li>
-      </ul>
+      {bShowSearch && <CitySearchBox />}
     </div>
   );
 }

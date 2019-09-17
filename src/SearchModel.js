@@ -30,6 +30,9 @@ const model = {
   setSelectedCity: action((state, obj) => {
     state.selectedCity = obj;
   }),
+  resetSelectedCity: action(state => {
+    state.selectedCity = { city: "", state: "" };
+  }),
   fullResults: [],
   setFullResults: action((state, res) => {
     state.fullResults = res;
@@ -45,6 +48,14 @@ const model = {
   selectedHouseId: null,
   setSelectedHouseId: action((state, id) => {
     state.selectedHouseId = id;
+  }),
+  listingBeingViewed: null,
+  setListingBeingViewed: action((state, id) => {
+    state.listingBeingViewed = state.fullResults[id];
+  }),
+  toMapSearch: false,
+  setToMapSearch: action((state, bGoTo) => {
+    state.toMapSearch = bGoTo;
   })
 };
 

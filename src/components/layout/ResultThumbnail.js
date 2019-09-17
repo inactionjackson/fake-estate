@@ -9,13 +9,14 @@ export default function ResultThumbnail({ listing, id, focusHandler }) {
   const g_selectedHouseId = useStoreState(state => state.selectedHouseId);
   const [bSelected, setbSelected] = useState(false);
   const ref = React.createRef();
+  const clickHandler = useStoreActions(
+    actions => actions.setListingBeingViewed
+  );
+
   useEffect(() => {
     if (listing.id === g_selectedHouseId) {
       setbSelected(true);
-      console.log(window.innerHeight);
-      if (ref.current.offsetTop > window.innerHeight) {
-        focusHandler(ref.current.offsetTop);
-      }
+      focusHandler(ref.current.offsetTop);
     } else {
       setbSelected(false);
     }
@@ -25,6 +26,9 @@ export default function ResultThumbnail({ listing, id, focusHandler }) {
       className={(bSelected ? "selectedThumb " : "") + "resultThumbnail"}
       onMouseOver={() => {
         g_setSelectedHouseId(listing.id);
+      }}
+      onClick={() => {
+        clickHandler(listing.id);
       }}
       ref={ref}
     >

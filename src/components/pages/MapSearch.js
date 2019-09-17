@@ -4,6 +4,7 @@ import MapDisplay from "../layout/MapDisplay";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import Axios from "axios";
 import SearchHeader from "../layout/SearchHeader";
+import DetailsModul from "../layout/DetailsModul";
 
 export default function MapSearch() {
   const g_searchFilters = useStoreState(state => state.searchFilters);
@@ -13,6 +14,8 @@ export default function MapSearch() {
   );
   const g_setFullResults = useStoreActions(actions => actions.setFullResults);
   const g_fullResults = useStoreState(state => state.fullResults);
+  const g_listingBeingViewed = useStoreState(state => state.listingBeingViewed);
+
   useEffect(() => {
     Axios.get("placeholderHouses.json")
       .catch(error => console.log(error))
@@ -45,6 +48,7 @@ export default function MapSearch() {
   }, [g_searchFilters, g_fullResults]);
   return (
     <div className="page">
+      {g_listingBeingViewed && <DetailsModul />}
       <SearchHeader />
       <div className="mapSearchResult">
         <ResultGrid />
