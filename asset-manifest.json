@@ -1,14 +1,14 @@
 {
-  "main.css": "/fake-estate/static/css/main.b21f1f1f.chunk.css",
-  "main.js": "/fake-estate/static/js/main.67cd5790.chunk.js",
-  "main.js.map": "/fake-estate/static/js/main.67cd5790.chunk.js.map",
-  "runtime~main.js": "/fake-estate/static/js/runtime~main.640898d5.js",
-  "runtime~main.js.map": "/fake-estate/static/js/runtime~main.640898d5.js.map",
-  "static/js/2.f4fc1e5b.chunk.js": "/fake-estate/static/js/2.f4fc1e5b.chunk.js",
-  "static/js/2.f4fc1e5b.chunk.js.map": "/fake-estate/static/js/2.f4fc1e5b.chunk.js.map",
-  "index.html": "/fake-estate/index.html",
-  "precache-manifest.2b0dd06628b62e4da1692ea01bbbf552.js": "/fake-estate/precache-manifest.2b0dd06628b62e4da1692ea01bbbf552.js",
-  "service-worker.js": "/fake-estate/service-worker.js",
-  "static/css/main.b21f1f1f.chunk.css.map": "/fake-estate/static/css/main.b21f1f1f.chunk.css.map",
-  "static/media/App.css": "/fake-estate/static/media/kevin-young-7002-unsplash.309a70c3.jpg"
+  "main.css": "/static/css/main.4b99e405.chunk.css",
+  "main.js": "/static/js/main.91712d0f.chunk.js",
+  "main.js.map": "/static/js/main.91712d0f.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.f4fc1e5b.chunk.js": "/static/js/2.f4fc1e5b.chunk.js",
+  "static/js/2.f4fc1e5b.chunk.js.map": "/static/js/2.f4fc1e5b.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.5105739f85dbb53235a2e1b8469deb85.js": "/precache-manifest.5105739f85dbb53235a2e1b8469deb85.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.4b99e405.chunk.css.map": "/static/css/main.4b99e405.chunk.css.map",
+  "static/media/App.css": "/static/media/kevin-young-7002-unsplash.309a70c3.jpg"
 }
