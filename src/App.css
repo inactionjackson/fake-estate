@@ -60,7 +60,7 @@ body {
 .citySearchBox input {
   padding: 10px;
   font-size: 1.5em;
-  border: none;
+  border: 1px solid grey;
 }
 .citySearchBox button {
   padding: 10px 20px;
