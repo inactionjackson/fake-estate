@@ -1,5 +1,5 @@
 {
-  "main.css": "/fake-estate/static/css/main.b9b3f5d9.chunk.css",
+  "main.css": "/fake-estate/static/css/main.b21f1f1f.chunk.css",
   "main.js": "/fake-estate/static/js/main.67cd5790.chunk.js",
   "main.js.map": "/fake-estate/static/js/main.67cd5790.chunk.js.map",
   "runtime~main.js": "/fake-estate/static/js/runtime~main.640898d5.js",
@@ -7,8 +7,8 @@
   "static/js/2.f4fc1e5b.chunk.js": "/fake-estate/static/js/2.f4fc1e5b.chunk.js",
   "static/js/2.f4fc1e5b.chunk.js.map": "/fake-estate/static/js/2.f4fc1e5b.chunk.js.map",
   "index.html": "/fake-estate/index.html",
-  "precache-manifest.dc1b84a7e27b7a9e839ae2f059c56eb9.js": "/fake-estate/precache-manifest.dc1b84a7e27b7a9e839ae2f059c56eb9.js",
+  "precache-manifest.2b0dd06628b62e4da1692ea01bbbf552.js": "/fake-estate/precache-manifest.2b0dd06628b62e4da1692ea01bbbf552.js",
   "service-worker.js": "/fake-estate/service-worker.js",
-  "static/css/main.b9b3f5d9.chunk.css.map": "/fake-estate/static/css/main.b9b3f5d9.chunk.css.map",
+  "static/css/main.b21f1f1f.chunk.css.map": "/fake-estate/static/css/main.b21f1f1f.chunk.css.map",
   "static/media/App.css": "/fake-estate/static/media/kevin-young-7002-unsplash.309a70c3.jpg"
 }

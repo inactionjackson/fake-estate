@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "/fake-estate/static/js/runtime~main.640898d5.js"
   },
   {
-    "revision": "25db8eef43dee09ce191",
+    "revision": "91c3febdeafb18977a5f",
     "url": "/fake-estate/static/js/main.67cd5790.chunk.js"
   },
   {
@@ -16,11 +16,11 @@ self.__precacheManifest = [
     "url": "/fake-estate/static/js/2.f4fc1e5b.chunk.js"
   },
   {
-    "revision": "25db8eef43dee09ce191",
-    "url": "/fake-estate/static/css/main.b9b3f5d9.chunk.css"
+    "revision": "91c3febdeafb18977a5f",
+    "url": "/fake-estate/static/css/main.b21f1f1f.chunk.css"
   },
   {
-    "revision": "f23a39a718a272aa02795f01143808b4",
+    "revision": "06aa95c545b0571c03e5894bb511628c",
     "url": "/fake-estate/index.html"
   }
 ];
