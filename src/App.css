@@ -195,6 +195,9 @@ label:hover {
   position: relative;
   display: block;
 }
+.resultThumbnail:hover {
+  cursor: pointer;
+}
 
 .resultThumbnail img {
   width: 100%;
@@ -218,8 +221,8 @@ label:hover {
 .selectedThumb {
   -moz-box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
   -webkit-box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
-  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
-  opacity: 0.7;
+  box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
+  opacity: 0.5;
 }
 .resultThumbnail span {
   padding-left: 5px;
@@ -292,4 +295,65 @@ label:hover {
 .infoDescription {
   padding: 10px;
   font-size: 1.1em;
+}
+
+.garageSelector {
+  display: inline-block;
+  width: 20px;
+  position: relative;
+}
+.garageSelector label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcfff4;
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.garageSelector label:after {
+  content: "";
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.garageSelector label:hover::after {
+  opacity: 0.5;
+}
+.garageSelector input[type="checkbox"] {
+  visibility: hidden;
+}
+.garageSelector input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+@media (max-width: 1370px) {
+  .resultsCount {
+    display: none;
+  }
+  .searchHeader input {
+    font-size: 0.8em;
+  }
+
+  .searchHeader button {
+    font-size: 0.8em;
+    min-width: 150px;
+  }
+  .mapSearchResult {
+    grid-template-columns: 40% 60%;
+  }
 }

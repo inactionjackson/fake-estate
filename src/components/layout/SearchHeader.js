@@ -13,7 +13,6 @@ export default function SearchHeader() {
     actions => actions.togglebHasGarage
   );
   const g_filteredResults = useStoreState(state => state.filteredResults);
-  //TODO: style bar better
 
   return (
     <div className="searchHeader">
@@ -62,13 +61,16 @@ export default function SearchHeader() {
         valueFormatter={F.sqft}
         id={3}
       />
-      <label htmlFor="hasGarage">Garage Required:</label>
-      <input
-        type="checkbox"
-        id="hasGarage"
-        name="hasGarage"
-        onClick={g_togglebHasGarage}
-      />
+      <span style={{ color: "white", "font-size": "1.2em" }}>Garage: </span>
+      <div className="garageSelector">
+        <input
+          type="checkbox"
+          id="hasGarage"
+          name="hasGarage"
+          onClick={g_togglebHasGarage}
+        />
+        <label htmlFor="hasGarage"></label>
+      </div>
       <p className="resultsCount">
         {g_filteredResults ? g_filteredResults.length : 0} Results Found
       </p>

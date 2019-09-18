@@ -32,8 +32,6 @@ export default function CitySearchBox() {
   }, []);
 
   const findCityByTerm = term => {
-    //TODO: make work when state is typed as well
-    // seperate by space or comma and test each term vs city and state
     term = term.toUpperCase();
     let termLen = term.length;
     let firstL = term[0];

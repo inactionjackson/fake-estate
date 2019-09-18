@@ -21,7 +21,7 @@ export default function NumberDropdown({
     <ul className="autoCompleteBox">
       {options.map((value, id) => (
         <li className="suggestion" key={id} onClick={() => onSelect(value)}>
-          {valueFormatter(value)}
+          {valueFormatter(value, true)}
         </li>
       ))}
     </ul>

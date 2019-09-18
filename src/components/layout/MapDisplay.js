@@ -14,6 +14,9 @@ export default function MapDisplay() {
   const g_setSelectedHouseId = useStoreActions(
     actions => actions.setSelectedHouseId
   );
+  const g_setListingBeingViewed = useStoreActions(
+    actions => actions.setListingBeingViewed
+  );
   const [bFailedToLoadMap, setbFailedToLoadMap] = useState(false);
   const [map, setMap] = useState(null);
   const [bNewHouseCoordsNeeded, setbNewHouseCoordsNeeded] = useState(false);
@@ -107,6 +110,9 @@ export default function MapDisplay() {
             m.bindPopup(F.price(house.price));
             m.on("mouseover", () => {
               markerHoverHandler(house.id);
+            });
+            m.on("click", () => {
+              g_setListingBeingViewed(house.id);
             });
             return { marker: m, id: house.id };
           }

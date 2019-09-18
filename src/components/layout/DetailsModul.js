@@ -16,7 +16,9 @@ export default function DetailsModul() {
       "/" +
       F.bath(listing.bth) +
       "  |  has garage: " +
-      (listing.garage ? "Yes" : "No")
+      (listing.garage ? "Yes" : "No") +
+      " | " +
+      F.sqft(listing.sqf)
     );
   };
   const hideListing = () => {

@@ -17,22 +17,31 @@ export class Formatters {
     }
     return price;
   };
-  static bed = bdrms => {
+  static bed = (bdrms, isSearch = false) => {
     if (parseInt(bdrms) >= 0) {
-      bdrms += "+ Beds";
+      if (isSearch) {
+        bdrms += "+";
+      }
+      bdrms += " Beds";
     }
     return bdrms;
   };
-  static bath = baths => {
+  static bath = (baths, isSearch = false) => {
     if (parseInt(baths) > 0) {
-      baths += "+ Baths";
+      if (isSearch) {
+        baths += "+";
+      }
+      baths += " Baths";
     }
     return baths;
   };
-  static sqft = sqfts => {
+  static sqft = (sqfts, isSearch = false) => {
     if (parseInt(sqfts) > 0) {
       sqfts = this.number(sqfts);
-      sqfts += "+ sq.ft.";
+      if (isSearch) {
+        sqfts += "+";
+      }
+      sqfts += " sq.ft.";
     }
     return sqfts;
   };

@@ -42,7 +42,7 @@ export default function ButtonWithDropdown({
     <div className="searchInputContainer">
       <div className="dropdownContainer">
         <button onClick={toggleList}>
-          <p>{valueFormatter(value)}</p>
+          <p>{valueFormatter(value, true)}</p>
           <span> &#x2228; </span>
         </button>
         {showDropdown && (
