@@ -1,6 +1,6 @@
 {
-  "name": "react_realestate",
-  "homepage": "http://inactionjackson.github.io/fake-estate",
+  "name": "fake-estate",
+  "homepage": "http://fake-estate.jxndevelopment.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
